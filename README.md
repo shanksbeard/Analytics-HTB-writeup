@@ -120,3 +120,4 @@ root@analytics:~# id
 uid=0(root) gid=1000(metalytics) groups=1000(metalytics)
 ```
 ## boom you are the root !!! you made it.
+![Screenshot 2023-10-14 at 13-04-00 Owned Analytics from Hack The Box!](https://github.com/shanksbeard/Analytics-HTB-writeup/assets/147916074/0e72d213-c97a-44cc-87e9-10d5bcb4eb26)
