@@ -34,7 +34,7 @@ Nmap done: 1 IP address (1 host up) scanned in 12.65 seconds
 
 ###### when we make an inital request to this page 
 
-![Screenshot at 2023-10-14 11-23-13](https://github.com/shanksbeard/Analytics-htb-writeup/assets/147916074/d542131f-ef64-48dc-b501-13bef1103879)
+![Screenshot at 2023-10-14 11-23-13](https://github.com/shanksbeard/Analytics-HTB-writeup/assets/147916074/7e627aa3-029b-405b-a996-3a3b01472c88)
 
 <!--  it gave us a setup-token that enables us to  post our RCE payload to the api "/api/setup/validate" -->
 
